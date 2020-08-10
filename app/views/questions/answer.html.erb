@@ -1,0 +1,20 @@
+<h1>Stupid Coaching</h1>
+
+<% question = params[:question] %>
+<p><%= question %></p>
+<p><i>-You</i></p>
+
+<% answer = "I don't care, get dressed and go to work!" %>
+<% if question == "I am going to work" %>
+  <% answer = "Great !" %>
+<% elsif question.include? "?" %>
+  <% answer = "Silly question, get dressed and go to work!." %>
+<% end %>
+
+<div style="background-color: #FDF6E3">
+  <p><br><%= answer %></p>
+  <p><i>-Your coach</i></p>
+</div>
+
+<br>
+<%= link_to 'Ask another question', ask_path %>
